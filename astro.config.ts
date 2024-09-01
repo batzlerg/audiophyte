@@ -28,7 +28,7 @@ export default defineConfig({
     ],
     shikiConfig: {
       // For more themes, visit https://shiki.style/themes
-      themes: { light: "vitesse-light", dark: "vitesse-dark" },
+      themes: { light: "github-light", dark: "vitesse-dark" },
       wrap: true,
     },
   },
