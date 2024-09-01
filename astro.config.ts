@@ -9,6 +9,7 @@ import { SITE } from "./src/config";
 // https://astro.build/config
 export default defineConfig({
   site: SITE.website,
+  base: 'audiophyte', // todo: remove with custom domain
   integrations: [
     tailwind({
       applyBaseStyles: false,
