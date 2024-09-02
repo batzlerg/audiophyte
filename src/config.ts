@@ -4,7 +4,7 @@ export const SITE: Site = {
   website: "https://audiophyte.com/", // replace this with your deployed domain
   author: "Graham Batzler",
   profile: "https://github.com/batzlerg/",
-  desc: "a blog about technology, sound, ecology, and probably other stuff sometimes.",
+  desc: "a blog about technology, sound, and nature. and probably other stuff sometimes.",
   title: "audiophyte",
   ogImage: "astropaper-og.jpg",
   lightAndDarkMode: true,
