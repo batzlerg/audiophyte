@@ -4,7 +4,7 @@ pubDatetime: 2024-07-25T11:11:53Z
 title: How to integrate Giscus comments into AstroPaper
 slug: how-to-integrate-giscus-comments
 featured: true
-draft: false
+draft: true
 tags:
   - astro
   - blog
