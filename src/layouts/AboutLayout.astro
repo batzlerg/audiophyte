@@ -3,7 +3,9 @@ import { SITE } from "@config";
 import Breadcrumbs from "@components/Breadcrumbs.astro";
 import Footer from "@components/Footer.astro";
 import Header from "@components/Header.astro";
+import LinkButton from "@components/LinkButton.astro";
 import Layout from "./Layout.astro";
+import socialIcons from "@assets/socialIcons";
 
 export interface Props {
   frontmatter: {
@@ -13,6 +15,16 @@ export interface Props {
 }
 
 const { frontmatter } = Astro.props;
+
+
+const URL = Astro.url;
+
+const social ={ 
+  name: "Github",
+  href: "https://github.com/batzlerg/audiophyte/",
+  linkTitle: `Github link for audiophyte`
+} as const;
+
 ---
 
 <Layout title={`${frontmatter.title} | ${SITE.title}`}>
@@ -22,7 +34,31 @@ const { frontmatter } = Astro.props;
     <section id="about" class="prose mb-28 max-w-3xl prose-img:border-0">
       <h1 class="text-2xl tracking-wider sm:text-3xl">{frontmatter.title}</h1>
       <slot />
+      <div class="social-icons">
+        <div class="text-center">
+          <LinkButton
+            href={`${social.href + URL}`}
+            className="link-button"
+            title={social.linkTitle}
+          >
+            <Fragment set:html={
+              socialIcons[social.name]
+              } />
+            <span class="sr-only">{social.linkTitle}</span>
+            Source on Github
+          </LinkButton>
+        </div>
+      </div>
     </section>
   </main>
   <Footer />
 </Layout>
+
+<style>
+  .social-icons {
+    @apply flex flex-col flex-wrap items-center justify-center gap-1 sm:items-start;
+  }
+  .link-button {
+    @apply scale-90 p-2 sm:p-1;
+  }
+</style>
