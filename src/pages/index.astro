@@ -15,21 +15,21 @@ const posts = await getCollection("blog");
 const sortedPosts = getSortedPosts(posts);
 const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
 const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
-
-// const socialCount = SOCIALS.filter(social => social.active).length;
 ---
 
 <Layout>
   <Header />
   <main id="main-content">
     <section id="hero">
-      <div>
+      <header>
         <h1>audiophyte</h1>
-        <span class="part-of-speech">(noun)</span>
-      </div>
-      <div class="phonetic-pronunciation">ˈȯ-dē-ō-ˌfīt</div>
-      <p>1) a student of technology, sound, and nature</p>
-      <p>2) an exploration of learning in public</p>
+        <p class="part-of-speech">(noun)</p>
+      </header>
+      <p class="phonetic-pronunciation">ˈȯ-dē-ō-ˌfīt</p>
+      <ol class="definition-list">
+        <li>a student of technology, sound, and nature</li>
+        <li>an exploration of learning in public</li>
+      </ol>
       <div class="social-wrapper">
         <Socials>
           <a
@@ -122,10 +122,20 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
     @apply my-2;
   }
   #hero .part-of-speech {
-    @apply -mt-4 font-bold italic;
+    @apply -mt-4 font-bold italic inline-block;
   }
   #hero .phonetic-pronunciation {
     @apply -mt-4 mb-4 font-bold italic;
+  }
+  ol {
+    counter-reset: list;
+  }
+  ol > li {
+    list-style: none;
+  }
+  ol > li:before {
+    content: counter(list, numeric) ") ";
+    counter-increment: list;
   }
   .social-wrapper {
     @apply mt-4 flex flex-col sm:flex-row sm:items-center;
