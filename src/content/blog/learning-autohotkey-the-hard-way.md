@@ -15,8 +15,6 @@ description:
   An adventure in learning debugging tools instead of reading documentation
 ---
 
-## Learning AutoHotkey the Hard Way
-
 The first half of my computing journey was mostly on Windows (95, 98, 2000, XP) with a couple of frustrating but educational forays into Linux. But for the second half, I've mostly been a Mac user. In the olden days before WSL, software development on a Unix-based system with quality hardware and an OS that mostly Just Works (TM) was the path of least resistance.
 
 About two years ago I got a Windows PC again for the purposes of tinkering with AI models that require beefy GPU resources to run. I immediately encountered the unique friction of being a power user unable to express themself via keyboard shortcuts - cue cursing and endless searches for "<action> keyboard shortcut windows". I persevered to relearn most major key commands, but others have proven stickier in my muscle memory (or are just more ergonomically challenging).
