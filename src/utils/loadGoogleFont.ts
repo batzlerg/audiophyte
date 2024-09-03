@@ -45,18 +45,32 @@ async function loadGoogleFonts(
 > {
   const fontsConfig = [
     {
-      name: "IBM Plex Mono",
-      font: "IBM+Plex+Mono",
+      name: "Courier Prime",
+      font: "Courier+Prime",
       weight: 400,
       style: "normal",
     },
     {
-      name: "IBM Plex Mono",
-      font: "IBM+Plex+Mono:wght@700",
+      name: "Courier Prime",
+      font: "Courier+Prime",
+      weight: 400,
+      style: "italic",
+    },
+    {
+      name: "Courier Prime",
+      font: "Courier+Prime:wght@700",
       weight: 700,
       style: "bold",
     },
-  ];
+    // todo: single source of truth for fonts.
+    // until then, search for both Font Name and Font+Name to find code to update.
+    // {
+    //   name: "VT323",
+    //   font: "VT323",
+    //   weight: 400,
+    //   style: "normal",
+    // },
+  ]
 
   const fonts = await Promise.all(
     fontsConfig.map(async ({ name, font, weight, style }) => {

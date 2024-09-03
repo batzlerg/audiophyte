@@ -4,7 +4,7 @@ import Hr from "./Hr.astro";
 import LinkButton from "./LinkButton.astro";
 
 export interface Props {
-  activeNav?: "posts" | "tags" | "about" | "search";
+  activeNav?: "home" | "posts" | "tags" | "about" | "search";
 }
 
 const { activeNav } = Astro.props;
@@ -17,7 +17,7 @@ const { activeNav } = Astro.props;
       <a href="/" class="logo whitespace-nowrap inline-flex items-center">
         {
           LOGO_IMAGE.enable ? (
-            <>
+          <>
             <img
               src={`/assets/${LOGO_IMAGE.svg ? "logo.svg" : "logo.png"}`}
               class="mr-2"
@@ -25,12 +25,10 @@ const { activeNav } = Astro.props;
               width={LOGO_IMAGE.width}
               height={LOGO_IMAGE.height}
             />
-            {SITE.title}
-            </>
-          ) : (
-            SITE.title
-          )
+          </>
+          ) : null
         }
+        <span id="logo-title">{SITE.title}</span>
       </a>
       <nav id="nav-menu">
         <button
