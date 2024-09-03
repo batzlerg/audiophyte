@@ -6,7 +6,7 @@ export const SITE: Site = {
   profile: "https://github.com/batzlerg/",
   desc: "a blog about technology, sound, and nature. and probably other stuff sometimes.",
   title: "audiophyte",
-  ogImage: "astropaper-og.jpg",
+  ogImage: "logo.png",
   lightAndDarkMode: true,
   postPerIndex: 4,
   postPerPage: 3,
