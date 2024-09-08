@@ -29,9 +29,9 @@ Coupling two devices from different protocols together so that they effectively 
 
 ## The Tools
 
-1. Homebridge itself
+1. Homebridge itself ([install instructions](https://homebridge.io/how-to-install-homebridge))
 1. `homebridge-plugin-automation` by grrowl ([github repo](https://github.com/grrowl/homebridge-plugin-automation))
-1. a text editor or IDE
+1. a text editor or IDE (optional, but helpful for debugging)
 
 ## Setup Instructions
 
@@ -124,7 +124,7 @@ To use this script for your own devices:
 
 1. Change `INITIATOR_SERVICE_NAME` to the name of the device you want to trigger the automation.
 1. Change `RECEIVER_SERVICE_NAME` to the name of the device you want to control.
-1. If you're editing outside the plugin window, make sure to paste the new vesion into the window
+1. If you're editing the code outside the plugin window, make sure to paste the new version into the plugin config editor
 1. Scroll to the bottom of the window and click "Save". This will restart Homebridge and apply your changes.
 
 Make sure these names exactly match the names of your accessories in Homebridge, including capitalization and spaces.
