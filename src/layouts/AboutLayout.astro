@@ -16,9 +16,6 @@ export interface Props {
 
 const { frontmatter } = Astro.props;
 
-
-const URL = Astro.url;
-
 const social ={ 
   name: "Github",
   href: "https://github.com/batzlerg/audiophyte/",
@@ -37,7 +34,7 @@ const social ={
       <div class="social-icons">
         <div class="text-center">
           <LinkButton
-            href={`${social.href + URL}`}
+            href={social.href}
             className="link-button"
             title={social.linkTitle}
           >
