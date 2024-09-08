@@ -3,6 +3,7 @@ import tailwind from "@astrojs/tailwind";
 import react from "@astrojs/react";
 import remarkToc from "remark-toc";
 import remarkCollapse from "remark-collapse";
+import rehypeExternalLinks from 'rehype-external-links'
 import sitemap from "@astrojs/sitemap";
 import { SITE } from "./src/config";
 
@@ -24,7 +25,16 @@ export default defineConfig({
         {
           test: "Table of contents",
         },
-      ],
+      ]
+    ],
+    rehypePlugins: [
+      [
+        rehypeExternalLinks,
+        {
+          rel: ['nofollow'],
+          target: ['_blank']
+        }
+      ]
     ],
     shikiConfig: {
       // For more themes, visit https://shiki.style/themes
